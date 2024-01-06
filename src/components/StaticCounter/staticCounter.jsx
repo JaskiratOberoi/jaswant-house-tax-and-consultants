@@ -1,30 +1,12 @@
-{
-  /* <div id="counter">
-<!-- counts -->
-</div>
-
-<script>
-let counts = setInterval(updated);
-let upto = 0;
-function updated() {
-    let count = document.getElementById("counter");
-    count.innerHTML = ++upto;
-    if (upto === 1000) {
-        clearInterval(counts);
-    }
-}
-</script> */
-}
-
 import React from "react";
 
-function staticCounter() {
+function StaticCounter(Limit) {
   let counts = setInterval(updated);
   let upto = 0;
   function updated() {
     let count = document.getElementById("counter");
     count.innerHTML = ++upto;
-    if (upto === 1000) {
+    if (upto === Limit) {
       clearInterval(counts);
     }
   }
@@ -35,4 +17,4 @@ function staticCounter() {
   );
 }
 
-export default staticCounter;
+export default StaticCounter;
